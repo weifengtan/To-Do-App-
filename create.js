@@ -1,7 +1,7 @@
 const { ipcRenderer } = require('electron'); 
 
 document.getElementById('createButton').addEventListener('click', ()=>{
-  ipcRenderer.send('createNote'); 
+  ipcRenderer.send('createNote', "request a new window"); 
 }); 
 
 ipcRenderer.on('noteCreated', (event, noteText) => {

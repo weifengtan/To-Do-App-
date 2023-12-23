@@ -1,7 +1,14 @@
 const {app, BrowserWindow, ipcMain} = require('electron'); 
 
 function createWindow() {
-    const win = new BrowserWindow({width: 800, height: 600, webPreferences: { devTools:true, nodeIntegration:true,} });
+    const win = new BrowserWindow({width: 800, 
+        height: 600, 
+        webPreferences: { 
+            devTools:true, 
+            nodeIntegration:true,
+            contextIsolation: false,
+        }, 
+        });
     
     win.loadFile('index.html')
     win.webContents.openDevTools(); 
@@ -25,7 +32,10 @@ app.on('activate', () => {
 //     event.reply('new-note', noteText); 
 // }); 
 
-ipcMain.on('createNote', () => {
-  const noteText = 'New Note'; 
-  mainWindow.webContents.send('noteCreated', noteText);
+ipcMain.on('createNote', (event, data) => {
+  const note = new BrowserWindow({
+    width: 450, 
+    height: 450, 
+  }); 
+  note.loadFile('note.html');
 });
