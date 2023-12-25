@@ -1,9 +1,12 @@
 {
     "name": "to-do-app",
-    "version": "1.0.0", 
+    "version": "1.0.0",
     "description": "",
     "main": "main.js",
     "scripts": {
-        "start" : "electron --no-sandbox main.js"
+        "start": "electron --no-sandbox main.js"
+    },
+    "dependencies": {
+        "electron": "^28.1.0"
     }
 }

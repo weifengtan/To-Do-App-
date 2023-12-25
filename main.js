@@ -1,8 +1,8 @@
 const {app, BrowserWindow, ipcMain} = require('electron'); 
 
 function createWindow() {
-    const win = new BrowserWindow({width: 800, 
-        height: 600, 
+    const win = new BrowserWindow({width: 1000, 
+        height: 800, 
         webPreferences: { 
             devTools:true, 
             nodeIntegration:true,
@@ -11,7 +11,7 @@ function createWindow() {
         });
     
     win.loadFile('index.html')
-    win.webContents.openDevTools(); 
+    //win.webContents.openDevTools(); 
 }
 
 app.whenReady().then(createWindow); 

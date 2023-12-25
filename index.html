@@ -4,14 +4,52 @@
         <meta charset="UTF-8">
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <title> ToDo </title>
-        <script src="function.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="index.css"> 
     </head>
 
     <body>
-        <h1> Header 1 </h1>
-        <div id="menu">
-            <button onclick="createNote()"> Create </button>
+        <!-- Date container -->
+        <div id="date-container">
+            <h1 id="date"> Today's Date </h1>
+            <h2 id="day"> Day </h2>
         </div>
-        <div id="noteContainer"></div>
+        <!-- Menu container -->
+        <div id="menu-container">
+            <!-- todo menu-->
+            <div id="todo-menu-container">
+                <!-- todo header -->
+                <div class="header"> 
+                    <h3 id="todo-header"> Dailys </h3> 
+                </div>
+                <div class="input-conainter">
+                    <input id="todo-input">
+                    <button id="todo-button"> Add </button>
+                </div>
+                <ul id="todo-list-container">
+                </ul>
+            </div>
+            <!-- goal-habit-container -->
+            <div id="goal-habit-container">
+                <!-- goal menu -->
+                <div id="goal-menu-container">
+                    <div class="header">
+                        <h3 id="goal-header"> Goals </h3>
+                    </div>
+                </div>
+                <!-- habit menu -->
+                <div id="habit-menu-container">
+                    <div class="header">
+                        <h3 id="habit-header"> Habits </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Timeline container -->
+        <div id="timeline-container">
+            <div class="header">
+                <h3 id="timeline-header"> Timeline </h3>
+            </div>
+        </div>
     </body>
 </html>
